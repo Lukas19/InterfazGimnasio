@@ -33,31 +33,31 @@ class Login extends React.Component {
         }
         return (
             <div>
-                <div class="col-sm-6 col-sm-offset-3">
+                <div className="col-sm-6 col-sm-offset-3">
                     <h1>Gimnasio USM</h1>
                 </div>
                 <div className="login">
 
-                    <div class="col-sm-6 col-sm-offset-3">
+                    <div className="col-sm-6 col-sm-offset-3">
 
-                        <div class="panel panel-primary">
-                            <div class="panel-heading">Login</div>
+                        <div className="panel panel-primary">
+                            <div className="panel-heading">Login</div>
 
-                            <div class="panel-body">
+                            <div className="panel-body">
 
                                 <form onSubmit={this.handleSubmit}>
-                                    <div classname={"form-group"}>
+                                    <div className={"form-group"}>
                                         <label>
                                             Nombre:
                                             <input
                                                 type="email"
-                                                class="form-control form-control-lg"
+                                                className="form-control form-control-lg"
                                                 placeholder="Ingrese su email"
                                                 id="emailHelp"
                                                 aria-describedby="emailHelp"
                                                 value={this.state.mail}
                                                 onChange={this.handleChange}/>
-                                            <small id="emailHelp" class="form-text text-muted">
+                                            <small id="emailHelp" className="form-text text-muted">
                                                 No olvide utilizar su mail USM
                                             </small>
 
@@ -67,14 +67,14 @@ class Login extends React.Component {
                                         <label>
                                             Password:
                                             <input type="password"
-                                                   class="form-control form-control-lg"
+                                                   className="form-control form-control-lg"
                                                    id="exampleInputPassword1"
                                                    placeholder="Password"
                                                    password={this.state.password}
                                                    onChange={this.handleChange}/>
                                         </label>
                                     </div>
-                                    <input type="submit" class="btn btn-primary" value="Submit"/>
+                                    <input type="submit" className="btn btn-primary" value="Submit"/>
                                 </form>
                             </div>
                         </div>
