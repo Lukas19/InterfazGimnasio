@@ -13,8 +13,14 @@ class Welcome extends React.Component {
 
     render () {
         const {fireRedirect} =  this.state; //Esta línea ahorra escribir abajo this.state.fireRedirect
-        if (fireRedirect == "Ficha"){
+        if (fireRedirect === "Ficha"){
             return <Redirect to='/welcome/ficha'/>;
+        }
+        else if (fireRedirect === "Horario"){
+            return <Redirect to='/welcome/horario'/>;
+        }
+        else if (fireRedirect === "Progreso"){
+            return <Redirect to='/welcome/progreso'/>;
         }
         return (
             <div>
@@ -35,13 +41,10 @@ class Welcome extends React.Component {
                         <button type="button" className="btn btn-primary btn-lg" onClick={() => this.setState({fireRedirect: "Ficha"})}>Revisar Ficha</button>
                     </div>
                     <div className="col-md-3">
-                        <button type="button" className="btn btn-primary btn-lg" onClick={() => this.setState({fireRedirect: "Horario"})}>Horario</button>
+                        <button type="button" className="btn btn-primary btn-lg" onClick={() => this.setState({fireRedirect: "Horario"})}>Horario y Reserva</button>
                     </div>
                     <div className="col-md-3">
-                        <button type="button" className="btn btn-primary btn-lg" onClick={() => this.setState({fireRedirect: "Reserva"})}>Reserva</button>
-                    </div>
-                    <div className="col-md-3">
-                        <button type="button" className="btn btn-primary btn-lg">Progreso</button>
+                        <button type="button" className="btn btn-primary btn-lg" onClick={() => this.setState({fireRedirect: "Progreso"})}>Progreso</button>
                     </div>
                 </div>
             </div>

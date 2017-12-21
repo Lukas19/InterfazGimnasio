@@ -1,10 +1,21 @@
 import React from 'react';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import {Redirect} from 'react-router';
 import './Ficha.css'
 
 class Ficha extends React.Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            fireRedirect: "Null"
+        };
+    }
 
     render () {
+        const {fireRedirect} =  this.state; //Esta línea ahorra escribir abajo this.state.fireRedirect
+        if (fireRedirect === "Ficha"){
+            return <Redirect to='/welcome'/>;
+        }
         return (
             <div>
                 <div className="col-sm-6 col-sm-offset-3">
@@ -22,7 +33,7 @@ class Ficha extends React.Component {
                                 <h5>Rol</h5>
                                 <hr></hr>
                                 <div className="col-sm-6 col-sm-offset-3">
-                                    <button type="button" class="btn btn-danger">Atrás</button>
+                                    <button type="button" class="btn btn-danger" onClick={() => this.setState({fireRedirect: "Ficha"})}>Atrás</button>
                                 </div>
                             </div>
                         </div>
