@@ -33,9 +33,9 @@ class Horario extends React.Component {
                     defaultView='week'
                     step={15}
                     timeslots={8}
-                    scrollToTime={new Date(1970, 1, 1, 6)}
-                    defaultDate={new Date(2015, 3, 12)}
-                    onSelectEvent={event => alert(event.title)}
+                    scrollToTime={new Date(2017, 1, 1)}
+                    defaultDate={moment()}
+                    onSelectEvent={event => alert(event.title+ ": " + event.desc)}
                     onSelectSlot={(slotInfo) => alert(
                         `selected slot: \n\nstart ${slotInfo.start.toLocaleString()} ` +
                         `\nend: ${slotInfo.end.toLocaleString()}` +

@@ -1,3 +1,6 @@
+import moment from 'moment';
+
+
 export default [
     {
         'title': 'All Day Event very long title',
@@ -13,8 +16,8 @@ export default [
 
     {
         'title': 'DTS STARTS',
-        'start': new Date(2016, 2, 13, 0, 0, 0),
-        'end': new Date(2016, 2, 20, 0, 0, 0)
+        'start': new Date(2017, 12, 25, 0, 0, 0),
+        'end': new Date(2017, 12, 26, 0, 0, 0)
     },
 
     {
@@ -25,26 +28,21 @@ export default [
 
     {
         'title': 'Some Event',
-        'start': new Date(2015, 3, 9, 0, 0, 0),
-        'end': new Date(2015, 3, 9, 0, 0, 0)
-    },
-    {
-        'title': 'Conference',
-        'start': new Date(2015, 3, 11),
-        'end': new Date(2015, 3, 13),
-        desc: 'Big conference for important people'
+        'start': moment(),
+        'end': moment().endOf('day').fromNow()
     },
     {
         'title': 'Aerobox',
-        'start': new Date(2017, 20, 12, 10, 30, 0, 0),
-        'end': new Date(2017, 20, 12, 12, 30, 0, 0),
+        'start': new Date(2017, 11, 22),
+        'end': new Date(2017, 11, 23),
         desc: 'Clase de Aerobox con el profe zunino'
     },
     {
-        'title': 'Lunch',
-        'start':new Date(2015, 3, 12, 12, 0, 0, 0),
-        'end': new Date(2015, 3, 12, 13, 0, 0, 0),
-        desc: 'Power lunch'
+        'title': 'Aerobox',
+        'start': new Date(2017, 11, 25, 14, 0, 0, 0),
+        'allDay': true,
+        'end': new Date(2017, 11, 26, 15, 0, 0, 0),
+        desc: 'Clase de Aerobox con el profe zunino'
     },
     {
         'title': 'Meeting',
@@ -53,8 +51,8 @@ export default [
     },
     {
         'title': 'Happy Hour',
-        'start':new Date(2015, 3, 12, 17, 0, 0, 0),
-        'end': new Date(2015, 3, 12, 17, 30, 0, 0),
+        'start':new Date(2017, 3, 12, 17, 0, 0, 0),
+        'end': new Date(2017, 3, 12, 17, 30, 0, 0),
         desc: 'Most important meal of the day'
     },
     {
